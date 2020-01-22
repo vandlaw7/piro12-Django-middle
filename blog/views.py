@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView
 
-from blog.models import Post
+from .models import Post
 
 post_list = ListView.as_view(model=Post)
 
 post_detail = DetailView.as_view(model=Post)
+
+
